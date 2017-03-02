@@ -9,6 +9,10 @@ var NUM_2_KEY = 50;
 var NUM_3_KEY = 51;
 var NUM_4_KEY = 52;
 var NUM_5_KEY = 53;
+var NUM_6_KEY = 54;
+var NUM_7_KEY = 55;
+var NUM_8_KEY = 56;
+var NUM_9_KEY = 57;
 var ESC_KEY = 27;
 
 function setDetails(imageUrl, titleText) {
@@ -71,23 +75,35 @@ function addKeyPressHandler() {
     var keyThumbnails = getThumbnailsArray();
     document.body.addEventListener('keyup', function(event) {
         event.preventDefault();
-        console.log(event.keyCode);
+        //console.log(keyThumbnails.length);
         if (event.keyCode === ESC_KEY) {
             hideDetails();
-        } else if (event.keyCode == NUM_1_KEY) {
+        } else if (event.keyCode == NUM_1_KEY && keyThumbnails.length >= 1) {
             setDetailsFromThumb(keyThumbnails[0]);
             showDetails();
-        } else if (event.keyCode == NUM_2_KEY) {
+        } else if (event.keyCode == NUM_2_KEY&& keyThumbnails.length >= 2) {
             setDetailsFromThumb(keyThumbnails[1]);
             showDetails();
-        } else if (event.keyCode == NUM_3_KEY) {
+        } else if (event.keyCode == NUM_3_KEY&& keyThumbnails.length >= 3) {
             setDetailsFromThumb(keyThumbnails[2]);
             showDetails();
-        } else if (event.keyCode == NUM_4_KEY) {
+        } else if (event.keyCode == NUM_4_KEY&& keyThumbnails.length >= 4) {
             setDetailsFromThumb(keyThumbnails[3]);
             showDetails();
-        } else if (event.keyCode == NUM_5_KEY) {
+        } else if (event.keyCode == NUM_5_KEY&& keyThumbnails.length >= 5) {
             setDetailsFromThumb(keyThumbnails[4]);
+            showDetails();
+        }else if (event.keyCode == NUM_6_KEY&& keyThumbnails.length >= 6) {
+            setDetailsFromThumb(keyThumbnails[5]);
+            showDetails();
+        }else if (event.keyCode == NUM_7_KEY&& keyThumbnails.length >= 7) {
+            setDetailsFromThumb(keyThumbnails[6]);
+            showDetails();
+        }else if (event.keyCode == NUM_8_KEY&& keyThumbnails.length >= 8) {
+            setDetailsFromThumb(keyThumbnails[7]);
+            showDetails();
+        }else if (event.keyCode == NUM_9_KEY&& keyThumbnails.length >= 9) {
+            setDetailsFromThumb(keyThumbnails[8]);
             showDetails();
         }
     });
